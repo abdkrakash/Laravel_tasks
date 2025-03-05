@@ -52,5 +52,5 @@ Route::resource('posts', PostController::class);
 
 
 Route::get('/home', function () {
-    return view('home');
+    return view('layouts.dashbord');
 });

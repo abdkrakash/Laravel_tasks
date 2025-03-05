@@ -23,4 +23,3 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" />
   </head>
   <body>
-    
