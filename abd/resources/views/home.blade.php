@@ -11,9 +11,18 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
+
+
       @include('include.sidebar')
+
+
       @yield( 'content')
+
+      
     </div>
+
+
+
     <!-- page-body-wrapper ends -->
     @include('include.footer')
   </div>
