@@ -51,7 +51,7 @@ use App\Http\Controllers\StudentController;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('layouts.dashbord');
 });
 
 Route::get('/dashbord', function () {
@@ -67,4 +67,4 @@ Route::get('/tables', function () {
     return view('layouts.tables');
 });
 
-// Route::resource('Students',  StudentController::class);
+Route::resource('Students',  StudentController::class);

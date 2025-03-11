@@ -61,16 +61,26 @@ return view('student.create');
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $student)
+    // public function update(Request $request, Student $student)
+    // {
+    //     //
+    // }
+    public function update(Request $request, $id)
     {
-        //
+        $students = student::findOrFail($id); 
+        $students->update([
+            'name' => $request->name,
+            'number' => $request->number,
+            'email' => $request->email
+        ]);
+        return redirect()->route('students.index');
     }
-
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Student $student)
+    public function destroy( $id)
     {
-        //
+       Student::destroy($id);
+        return redirect()->route('Students.index');
     }
 }
